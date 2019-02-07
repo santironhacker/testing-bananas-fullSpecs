@@ -1,0 +1,11 @@
+<h3>Banana counter</h3>
+<div class="box banana-counter">
+  {{ counter | banana }}
+</div>
+<div class="actions">
+  <button (click)="increase()" class="btn-increase">+</button>
+  <button (click)="decrease()" class="btn-decrease">-</button>
+</div>
+<div class="save">
+  <button (click)="saveBox()" class="special fit save-counter" [disabled]="counter === 0">Save Box</button>
+</div>

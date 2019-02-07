@@ -1,0 +1,23 @@
+<div class="list">
+  <table class="alt">
+    <thead>
+      <tr>
+        <th colspan="3">Banana boxes list</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let box of boxes">
+        <td class="box-id" [id]="'bid_'+box.id">{{ box.id }}</td>
+        <td class="box-quantity" [id]="'bqty_'+box.id">{{ box.quantity | banana }}</td>
+        <td><i [id]="'brm_'+box.id" (click)="handleRemove(box.id)" class="fa fa-trash box-remove"></i></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">
+          <b class="total-bananas">{{ getTotal() | banana }}</b>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+<section id="two" class="wrapper style1 special">
+  <p>
+    I love bananas and I have a banana tree at my backyard. Every day I collect all bananas I can and put them inside a box. I then store those boxes in my warehouse so I can enjoy my bananas at any time.
+  </p>
+  <p>
+    This is the App I use to control my banana stock. Are you a banana lover? Then give it a try!
+  </p>
+</section>
+<section class="wrapper special">
+  <div class="inner">
+    <div class="flex flex-2">
+      <app-counter (save)="handleSave($event)"></app-counter>
+      <app-list [boxes]="boxes" (remove)="handleRemove($event)"></app-list>
+    </div>
+  </div>
+</section>
